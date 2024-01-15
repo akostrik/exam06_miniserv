@@ -2,7 +2,7 @@
 Write a program that will listen for client to connect on a certain port on 127.0.0.1 and will let clients to speak with each other.  
   
 This program will take as first argument the port to bind to.  
-If no argument is given, it should write in stderr "Wrong number of arguments" followed by a \n and exit with status 1  
+If no argument is given, it should write in stderr "Wrong number of arguments" followed by a \n and exit with status 1.
   
 If a System Calls returns an error before the program start accepting connection, it should write in stderr "Fatal error" followed by a \n and exit with status 1
 If you cant allocate memory it should write in stderr "Fatal error" followed by a \n and exit with status 1
@@ -21,4 +21,4 @@ message will only be printable characters, no need to check
 a single message can contains multiple \n
 when the server receive a message, it must resend it to all the other client with "client %d: " before every line!
 When a client disconnect from the server:
-a message is sent to all the client that was connected to the server: "server: client %d just left\n"
+a message is sent to all the client that was connected to the server: "server: client %d just left\n".
