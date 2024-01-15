@@ -18,9 +18,13 @@ Clients must be able to send messages to your program.
 Message will only be printable characters, no need to check a single message can contains multiple \n.  
 When the server receive a message, it must resend it to all the other client with "client %d: " before every line.  
 When a client disconnect from the server: a message is sent to all the client that was connected to the server: "server: client %d just left\n".  
-
-Allowed functions: write, close, select, socket, accept, listen, send, recv, bind, strstr, malloc, realloc, free, calloc, bzero, atoi, sprintf, strlen, exit, strcpy, strcat, memset
-
+  
+* Allowed functions: write, close, select, socket, accept, listen, send, recv, bind, strstr, malloc, realloc, free, calloc, bzero, atoi, sprintf, strlen, exit, strcpy, strcat, memset  
+* Memory or fd leaks are forbidden  
+* you will find the file main.c with the beginning of a server and maybe some useful functions (this file use forbidden functions or write things that must not be there in your final program)
+* Warning our tester is expecting that you send the messages as fast as you can. Don't do un-necessary buffer.
+* you should use nc to test your program
+* to test you can use fcntl(fd, F_SETFL, O_NONBLOCK) but use select and NEVER check EAGAIN (man 2 send) 
 
 https://github.com/Saxsori/42-ExamRank06  
 https://github.com/pasqualerossi/42-School-Exam-Rank-06  
