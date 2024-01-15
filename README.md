@@ -19,6 +19,9 @@ Message will only be printable characters, no need to check a single message can
 When the server receive a message, it must resend it to all the other client with "client %d: " before every line.  
 When a client disconnect from the server: a message is sent to all the client that was connected to the server: "server: client %d just left\n".  
 
+Allowed functions: write, close, select, socket, accept, listen, send, recv, bind, strstr, malloc, realloc, free, calloc, bzero, atoi, sprintf, strlen, exit, strcpy, strcat, memset
+
+
 https://github.com/Saxsori/42-ExamRank06  
 https://github.com/pasqualerossi/42-School-Exam-Rank-06  
 https://github.com/NahIIo/examrank-02-03-04-05-06/tree/master/examRank06  
